@@ -65,11 +65,21 @@ addTwoNumbers('Hello', 5) //=> NaN
 // Your solution for 02-addTwoNumbers here:
 
 
-function addTwoNumbers(a,b) {
-  if n = numbers (n = n => a+b)
-  return a + b
+function addTwoNumbers(b,c){
+  let twoAnswers = b + c
+  if (typeof b  != "number" || typeof c !="number") {
+    return NaN
+  } else {
+    return twoAnswers
+  }
 }
 
+
+let twoResults = addTwoNumbers("Hello",5)
+console.log(twoResults)
+
+let twoResults1 = addTwoNumbers(10,1)
+console.log(twoResults1)
 
 
 
@@ -92,14 +102,19 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
-function sumNumbers(nums) {
-  let sum = 0;
-  for(let i = 0; i < nums.length; i++) {
-    sum += nums[i];
-  }
-  return sum;
+function addOne(a) {
+  let answer = a + 1
+  return answer
 }
+
+let result = addOne(-5)
+console.log(result)
+
+let result1 = addOne(5)
+console.log(result1)
+
+let result2 = addOne(1000)
+console.log(result2)
 
 
 
