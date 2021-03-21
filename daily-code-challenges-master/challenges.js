@@ -35,12 +35,6 @@ addOne(-5) //=> -4
 // Your solution for 01-addOne here:
 
 
-let numbers = [1,2,3,4,5]
-
-function addOne() {
-  let n = numbers (n = n => +1)
-  return(n)
-}
 
 
 
@@ -64,22 +58,6 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
-
-function addTwoNumbers(b,c){
-  let twoAnswers = b + c
-  if (typeof b  != "number" || typeof c !="number") {
-    return NaN
-  } else {
-    return twoAnswers
-  }
-}
-
-
-let twoResults = addTwoNumbers("Hello",5)
-console.log(twoResults)
-
-let twoResults1 = addTwoNumbers(10,1)
-console.log(twoResults1)
 
 
 
