@@ -35,6 +35,19 @@ addOne(-5) //=> -4
 // Your solution for 01-addOne here:
 
 
+function addOne(a) {
+  let answer = a + 1
+  return answer
+}
+
+let result = addOne(-5)
+console.log(result)
+
+let result1 = addOne(5)
+console.log(result1)
+
+let result2 = addOne(1000)
+console.log(result2)
 
 
 
