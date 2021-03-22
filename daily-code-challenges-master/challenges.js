@@ -71,7 +71,21 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
+function addTwoNumbers(b,c){
+  let twoAnswers = b + c
+  if (typeof b  != "number" || typeof c !="number") {
+    return NaN
+  } else {
+    return twoAnswers
+  }
+}
 
+
+let twoResults = addTwoNumbers("Hello",5)
+console.log(twoResults)
+
+let twoResults1 = addTwoNumbers(10,1)
+console.log(twoResults1)
 
 
 /*-----------------------------------------------------------------
