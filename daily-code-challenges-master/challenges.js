@@ -107,20 +107,23 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
+
 function addOne(a) {
-  let answer = a + 1
+  let answer = 0
+  for (let A of a){
+    answer += A
+  }
   return answer
 }
 
-let result = addOne(-5)
+let result = addOne([1, 2, 3])
 console.log(result)
 
-let result1 = addOne(5)
+let result1 = addOne([5, 7, 8])
 console.log(result1)
 
-let result2 = addOne(1000)
+let result2 = addOne([])
 console.log(result2)
-
 
 
 /*-----------------------------------------------------------------
