@@ -128,6 +128,13 @@ add(7,-12) //=> -5
 // Your solution for 04-addList here:
 
 
+function add() {
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum += num[i];
+  }
+  return sum;
+}
 
 
 
@@ -151,7 +158,13 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+function computeRemainder(a, b) {
+  if (b === 0) return Infinity;
+  return a - (Math.floor(a / b) * b);
+}
 
+ans = computerRemainder(10,2)
+console.log(ans)
 
 
 
