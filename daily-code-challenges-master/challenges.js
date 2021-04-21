@@ -70,22 +70,13 @@ addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
-
 function addTwoNumbers(b,c){
-  let twoAnswers = b + c
-  if (typeof b  != "number" || typeof c !="number") {
-    return NaN
-  } else {
-    return twoAnswers
-  }
+  return b + c
 }
 
+ans1 = addTwoNumbers(2,2)
+console.log(ans1)
 
-let twoResults = addTwoNumbers("Hello",5)
-console.log(twoResults)
-
-let twoResults1 = addTwoNumbers(10,1)
-console.log(twoResults1)
 
 
 /*-----------------------------------------------------------------
