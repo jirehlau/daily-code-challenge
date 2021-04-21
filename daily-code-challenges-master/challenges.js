@@ -99,22 +99,13 @@ sumNumbers([]) //=> 0
 // Your solution for 03-sumNumbers here:
 
 
-function addOne(a) {
-  let answer = 0
-  for (let A of a){
-    answer += A
-  }
-  return answer
+function sumNumbers(a) {
+  return += a 
 }
 
-let result = addOne([1, 2, 3])
-console.log(result)
+let ans = sumNumbers([1, 2, 3])
+console.log(ans)
 
-let result1 = addOne([5, 7, 8])
-console.log(result1)
-
-let result2 = addOne([])
-console.log(result2)
 
 
 /*-----------------------------------------------------------------
