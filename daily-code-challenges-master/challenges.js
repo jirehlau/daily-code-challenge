@@ -206,7 +206,10 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
+function reverseString(str) {
+    return str;
+}
+reverseString("SEI Rocks!");
 
 
 
