@@ -188,6 +188,16 @@ range(5,2) //=> "First argument must be less than second"
 // Your solution for 06-range here:
 
 
+function range(a, b) {
+  if (a > b) return ;
+  
+  let range = [];
+  for (let i = a; i < b; i++) {
+    range.push(i);
+  }
+  
+  return range;
+}
 
 
 
@@ -231,7 +241,14 @@ removeEnds('a'); //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
-
+function removeEnds(str) {
+  if (str.length < 3) return '';
+  let result= '';
+  for (let i = 1; i < str.length - 1; i++) {
+    result += str.charAt(i);
+  }
+  return result;
+}
 
 
 /*-----------------------------------------------------------------
@@ -255,7 +272,19 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 
 
 
-
+function charCount(str) {
+  let result = {};
+  for (let i = 0; i < str.length; i++) {
+    let char = str.charAt(i);
+    // already seen this char?
+    if (result[char]) {
+      result[char]++;
+    } else {
+      result[char] = 1;
+    }
+  }
+  return result;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -279,7 +308,13 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
+function formatWithPadding(int, char, length) {
+  let result = int.toFixed(0);
+  while (result.length < length) {
+    result = char + result;
+  }
+  return result;
+}
 
 
 
@@ -304,6 +339,15 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
+function isPalindrome(str) {
+  str = str.toLowerCase();
+  // loop to replace spaces
+  while (str.includes(' ')) str = str.replace(' ', '');
+  for (let i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str.charAt(i) !== str.charAt(str.length - i - 1)) return false;
+  }
+  return true;
+}
 
 
 
@@ -332,7 +376,14 @@ hammingDistance('abc', 'ab'); //=> NaN
 
 
 
-
+function hammingDistance(s1, s2) {
+  if (s1.length !== s2.length) return NaN;
+  let count = 0;
+  for (let i = 0; i < s1.length; i++) {
+    if (s1.charAt(i) !== s2.charAt(i)) count++;
+  }
+  return count;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 13-mumble
@@ -355,7 +406,13 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 // Your solution for 13-mumble here:
 
 
-
+function mumble(str) {
+  var result = '';
+  for (let i = 0; i < str.length; i++) {
+    result += ((i || '') && '-') + str.charAt(i).repeat(i + 1);
+  }
+  return result;
+}
 
 
 /*-----------------------------------------------------------------
@@ -376,7 +433,13 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
-
+function fromPairs(arr) {
+  let object = {};
+  arr.forEach(function(arr) {
+    object[arr[0]] = arr[1];
+  });
+  return object;
+}
 
 
 
@@ -399,6 +462,15 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c:
 // Your solution for 15-mergeObjects here:
 
 
+function mergeObjects(target, ...objects) {
+  objects.forEach(function(obj) {
+    // using ES2015's 'for in' loop
+    for(var key in obj) {
+      target[key] = obj[key];
+    }
+  });
+  return target;
+}
 
 
 
